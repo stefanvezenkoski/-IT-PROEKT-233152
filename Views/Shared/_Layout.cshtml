@@ -5,21 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>@ViewBag.Title - Internship Companies Manager</title>
 
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!--bootstrap biblioteka za css-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  <!--jQuery biblioteka-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script><!--bootstrap biblioteka za js-->
 
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /><!--ikoni-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">  <!--bootstap ikonki-->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
     @Styles.Render("~/Content/css")
@@ -29,7 +21,7 @@
 
 
 
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" /> <!--lokalnata kopija na bootstrap css-ot-->
     <link href="~/Content/site.css" rel="stylesheet" />
 
     <style>
@@ -106,13 +98,12 @@
 </head>
 
 <body>
+    <div id="particles-js"></div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-5">
             <img id="slika" src="~/logo1.png" alt="Logo" />
             @Html.ActionLink("Internship Companies Manager", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">@Html.ActionLink("Почетна", "Index", "Home", null, new { @class = "nav-link" + (ViewContext.RouteData.Values["Action"].ToString() == "Index" ? " active" : "") })</li>
@@ -151,20 +142,23 @@
             <p class="m-0 text-center text-white">
                 <img src="~/logo1.png" style="width:80px;height:auto;" alt="Alternate Text" />
                 <img src="https://courses.finki.ukim.mk/pluginfile.php/1/core_admin/logocompact/300x300/1672136478/moodle-io.png" style="width:100px;height:auto;" alt="Alternate Text" />
-                   &copy; @DateTime.Now.Year - Internship Companies Manager | ФИНКИ 2025 - Развил: Стефан Везенкоски
+                &copy; @DateTime.Now.Year - Internship Companies Manager | ФИНКИ 2025 - Развил: Стефан Везенкоски
             </p>
         </div>
     </footer>
 
-    <script 
+    <script
 </body>
 </h"></script>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
 
-    <script src="~/Scripts/scripts.js"></script>
+<script src="~/Scripts/scripts.js"></script>
 
-    @RenderSection("scripts", required: false)
-</body>
+@RenderSection("scripts", required: false)
+
+
+
+    </body>
 </html>

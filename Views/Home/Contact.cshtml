@@ -216,13 +216,11 @@
                     const email = document.getElementById('email').value.trim();
                     const message = document.getElementById('message').value.trim();
 
-                    // Валидација
                     if (!name || !email || !message) {
                         alert('Ве молам пополнете ги сите полиња.');
                         return;
                     }
 
-                    // Генерирање на тековно време
                     const now = new Date();
                     const time = now.getFullYear() + '-' +
                         String(now.getMonth() + 1).padStart(2, '0') + '-' +
@@ -231,7 +229,6 @@
                         String(now.getMinutes()).padStart(2, '0') + ':' +
                         String(now.getSeconds()).padStart(2, '0');
 
-                    // Испрати до администратор
                     emailjs.send("service_1o217ia", "template_qjyly8q", {
                         from_name: name,
                         from_email: email,
@@ -243,7 +240,6 @@
                         console.error("Грешка при праќање до администраторот:", error);
                     });
 
-                    // Испрати авто-одговор до клиентот
                     emailjs.send("service_1o217ia", "template_fb7ajit", {
                         to_name: name,
                         to_email: email
@@ -257,7 +253,6 @@
             }
         }
 
-        // Иницијализација кога страницата е вчитана
         document.addEventListener("DOMContentLoaded", function () {
             setupContactForm();
         });
